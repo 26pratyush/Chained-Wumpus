@@ -128,6 +128,18 @@ npm start
 * Sound FX, animations, mobile support
 
 ---
+## Snapshots
+![Screenshot (47)](https://github.com/user-attachments/assets/7a71d75a-3ea0-4623-90fe-5c245113c79d)
+
+![Screenshot (48)](https://github.com/user-attachments/assets/7034f235-88c4-47f0-ac93-466ccc6fad85)
+
+![Screenshot (49)](https://github.com/user-attachments/assets/7f1cc4d5-0f09-49bb-b57f-bb08cfd5190e)
+
+![Screenshot (50)](https://github.com/user-attachments/assets/3fcbf5d3-c04e-4df8-880a-375204732661)
+
+
+
+
 
 ## 🧑‍💻 Credits
 
