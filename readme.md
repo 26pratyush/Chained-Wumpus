@@ -39,8 +39,8 @@ A Web3 twist on the classic logic puzzle **Wumpus World**, where you dodge pits 
 ### 1. **Clone the repo**
 
 ```bash
-git clone https://github.com/26pratyush/Wumpus-BlockChain-World.git
-cd Wumpus-BlockChain-World
+git clone https://github.com/26pratyush/Chained-Wumpus
+cd Chained-Wumpus
 ```
 
 ---
