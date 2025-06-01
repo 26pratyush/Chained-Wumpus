@@ -1,37 +1,135 @@
-A blockchain based memory game wherein the user attempts to find matches by clicking tiles, each tile represents a [Non-Fungible Token](https://en.wikipedia.org/wiki/Non-fungible_token). The tiles are inspired from the idea of [CryptoKitties](https://www.cryptokitties.co/). A match is found when two tiles show the same icon. As soon as a match is found it is kept forever on the blockchain.
+## 🧠 Wumpus World NFT Game
 
-For every correct match the user is provided tokens which are cryptocurrencies and can be transfered over the exchange.
+A Web3 twist on the classic logic puzzle **Wumpus World**, where you dodge pits and a lurking Wumpus to grab gold. If you win, a **unique NFT** gets minted to your wallet.
 
-# Technical Stack
+## 🚀 Tech Stack
 
-1. **Frontend**: game logic implented on a client side web application written in **React**
-2. **Backend**: the **blockchain** serves as a backend database
+| Layer          | Tech Used                    |
+| -------------- | ---------------------------- |
+| **Frontend**   | React.js, Web3.js, Bootstrap |
+| **Backend**    | Solidity (ERC-721 NFT)       |
+| **Blockchain** | Ganache (local), Truffle     |
+| **Wallet**     | MetaMask                     |
+| **Styling**    | Dark mode custom CSS 🎨      |
 
-**The development standards are in accordance with [ERC721](http://erc721.org/)**
+---
 
-# Architecture
+## 📦 Features
 
-1. A web browsr will talk to a client side website
-2. The game logic is written on the client side website
-3. Tokens are created and saved on the blockchain
-4. Business logic of the blockchain component is written on an Ethereum smart contract
+* 🧭 4x4 logic grid with player, pits, Wumpus, and gold
+* 🎯 Joystick control layout
+* 🌬️ Perception system (breeze/stench)
+* 💀 Death by pit or Wumpus ends the game
+* 🪙 Reach gold = NFT minted to your wallet
+* 🧠 Built-in Web3 interaction using MetaMask
 
-# Requirements
+---
 
-1. **Node.js**: install all the dependencies and interacts with the client side application
-2. **Bootstrap**: for designing the UI, minimises the requirement for html and css
-3. **[Truffle](https://trufflesuite.com/)**: a framework used for writing, testing Ethereum smart contracts and deploying them on a blockchain. For installation- <code> npm install --g truffle@5.1.39 </code>
-4. **Ganache**: a personal blockchain for Ethereum development that can be used to deploy contracts, develop the applications and run tests. Available as both a desktop application and command line interface
-5. **[chai](https://www.chaijs.com/)**: an assertion library required for testing will be paired alongside **[mocha](https://mochajs.org/)** testing framework
+## 🔧 How to Run Locally
 
-# Metamask setup
+### Prerequisites
 
-1. Install the [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?utm_source=chrome-ntp-icon) extension for chrome
-2. Complete the setup
-3. Before proceeding further ensure Ganache is running
-4. Add a new network to MetaMask called Ganache an fill in the required fields.
-5. Go to accounts->import accounts and enter the private key (key symbol on the right) of the first account listed on Ganache UI
+* Node.js + npm
+* Ganache (desktop app or CLI)
+* MetaMask (browser extension)
+* Git Bash or Terminal
 
-# Resources-
-1. Github repository which is the core [idea](https://github.com/dappuniversity/blockchain_game) of the project
-2. [Web3 documentation](https://web3js.readthedocs.io/en/v1.7.0/)
+---
+
+### 1. **Clone the repo**
+
+```bash
+git clone https://github.com/26pratyush/Wumpus-BlockChain-World.git
+cd Wumpus-BlockChain-World
+```
+
+---
+
+### 2. **Install dependencies**
+
+```bash
+npm install
+```
+
+---
+
+### 3. **Start Ganache**
+
+* Open Ganache
+* Make sure it runs on `http://127.0.0.1:7545`
+* Copy one of the private keys into MetaMask → “Import Account”
+
+---
+
+### 4. **Compile and migrate smart contracts**
+
+```bash
+truffle compile
+truffle migrate --reset
+```
+
+---
+
+### 5. **Start the React app**
+
+```bash
+npm start
+```
+
+---
+
+### 6. **Connect MetaMask**
+
+* Visit `http://localhost:3000`
+* MetaMask will pop up to connect
+* Use an imported Ganache account
+
+---
+
+### ✅ You're In!
+
+* Use the joystick to navigate
+* Look for clues: breeze = pit nearby, stench = Wumpus nearby
+* Find the gold and mint your NFT!
+
+---
+
+## 🖼 NFT Details
+
+* The smart contract mints a **custom ERC-721 NFT** when the player wins
+* Metadata is static (for demo): `/images/gold.png`
+* Uses the local blockchain (Ganache) for all transactions
+
+---
+
+## 📁 Project Structure
+
+```
+├── src/
+│   ├── components/
+│   │   ├── App.js         # Game logic
+│   │   ├── App.css        # UI styling
+│   ├── abis/              # Contract ABI
+├── contracts/
+│   └── MemoryToken.sol    # ERC-721 Smart Contract
+├── migrations/
+│   └── 2_deploy_contracts.js
+├── truffle-config.js      # Truffle blockchain config
+```
+
+---
+
+## 🚀 Future Upgrades
+
+* Deploy to Polygon Mumbai or Sepolia testnet
+* Use IPFS for off-chain NFT metadata
+* Add multiple Wumpus and more pits
+* Leaderboard and score tracking via smart contracts
+* Sound FX, animations, mobile support
+
+---
+
+## 🧑‍💻 Credits
+
+👤 **Built on top of Memory Tokens**
+📫 [Divyank](https://github.com/singhdivyank)
