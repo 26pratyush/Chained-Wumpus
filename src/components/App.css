@@ -1,0 +1,98 @@
+/* Global dark theme */
+body {
+  background-color: #082837;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  background-color: #0aaeb1 !important;
+  border-bottom: 1px solid #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Grid styling */
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px; /* vertical space between rows */
+}
+
+.grid .row {
+  display: flex;
+  justify-content: center;
+  gap: 4px; /* horizontal space between tiles */
+}
+
+.grid-tile {
+  width: 64px;
+  height: 64px;
+  margin: 2px; /* reset bootstrap spacing */
+  image-rendering: pixelated;
+  border-radius: 2px;
+  border: 1px solid #333;
+  background-color: #222;
+}
+
+
+/* Joystick positioned right of the grid */
+.d-flex {
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.joystick {
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  grid-template-rows: 60px 60px 60px;
+  gap: 10px;
+  align-self: center;
+  margin-top: 15px; /* adjust this until it lines up with your grid center */
+}
+
+.joystick button {
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #010607;
+  color: #ffffff;
+  box-shadow: 0 0 5px #000;
+  transition: background-color 0.2s ease;
+}
+
+.joystick button:hover {
+  background-color: #053839;
+}
+
+.joystick .empty {
+  visibility: hidden;
+}
+
+
+/* Token styling */
+.token {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #00ff99;
+}
+
+/* Tile image quality */
+img {
+  image-rendering: pixelated;
+  border-radius: 2px;
+  border: 1px solid #333;
+  background-color: #222;
+}
+
+
